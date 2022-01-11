@@ -1,0 +1,24 @@
+.icon {
+    cursor: pointer;
+
+    &__bars {
+        display: none;
+        font-size: 2rem;
+        
+        @media only screen and (max-width: 56.25em) {
+            display: block;
+        }
+    }
+
+    &__times {
+        display: none;
+    
+        @media only screen and (max-width: 56.25em) {
+            display: block;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            cursor: pointer;
+        }
+    }
+}

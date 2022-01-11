@@ -1,0 +1,52 @@
+.post {
+    // POST POST
+    &__post {
+        width: 40rem;
+        padding: 1rem 2rem 2rem 2rem;
+        margin-bottom: 3rem;
+        background: $white-cl--3;
+        border-radius: 1rem;
+        box-shadow: $container-shadow;
+
+        @media only screen and (max-width: 31.25em) {
+            width: 100%;
+            margin-inline: auto;
+        }
+    }
+
+    &__date {
+        font-size: 1.2rem;
+    }
+
+    &__text {
+        font-size: 1.6rem;
+        margin-top: 2rem;
+    }
+    
+    & a {
+        font-size: 1.6rem;
+        color: $dark--2;
+        text-decoration: none;
+    }
+
+    &__bottom {
+        margin-top: 3rem;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    // POST PAGE
+    &__page {
+        width: 80%;
+        margin-inline: auto;
+        padding: 2rem;
+        margin-top: 5rem;
+        background: $white-cl--3;
+        border-radius: 1rem;
+        box-shadow: $container-shadow;
+        
+        @media only screen and (max-width: 30em) {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+.error {
+    &__post {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__title {
+        font-size: 2.2rem;
+        color: $red--1;
+    }
+
+    &__para {
+        font-size: 1.6rem;
+    }
+
+    &__square {
+        width: 23rem;
+        height: 23rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(45deg);
+        border-radius: 1rem;
+        box-shadow: $container-insert-shadow;
+
+        &--inner {
+            text-align: center;
+            transform: rotate(-45deg);
+        }
+    }
+    
+}

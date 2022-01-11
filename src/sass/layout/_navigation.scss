@@ -1,0 +1,108 @@
+.nav {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0 4rem;
+    background: $white-cl--3;
+    border-radius: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__list {
+        list-style: none;
+        padding: .7rem 2rem;
+        background: $white-cl--3;
+        border-radius: 1rem;
+        box-shadow: $container-insert-shadow--2;
+        display: flex;
+
+        & li {
+            transition: transform .3s ease;
+        }
+
+        & li a {
+            font-size: 1.4rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $dark--2;
+            
+            @media only screen and (max-width: 56.25em) {
+                font-size: 1.6rem;
+            }
+        }
+    
+        & * + * {
+            margin-left: 4rem;
+        }
+
+        @media only screen and (max-width: 56.25em) {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 40vw;
+            flex-direction: column;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            background: $white-cl--3;
+            box-shadow: $container-insert-shadow;
+            transform: translateX(100%);
+            transition: transform .3s ease;
+
+            & li {
+                padding: 1rem 0;
+            }
+
+            & li:not(:last-child) {
+                border-bottom: 1px solid $dark--1;
+            }
+
+            & li:hover:not(:last-child) {
+                transform: translateX(.5rem);
+            }
+
+            & li:first-child {
+                margin-top: 3rem;
+            }
+            
+            & * + * {
+                margin-left: 0;
+            }
+
+            &--active {
+                transform: translateX(0);
+            }
+        }
+    }
+
+    &__form {
+        width: 30rem;
+        height: 3rem;
+        border-radius: .5rem;
+
+        @media only screen and (max-width: 37.5em) {
+            position: absolute;
+            left: 3rem;
+            bottom: -3rem;
+        }
+
+        @media only screen and (max-width: 30em) {
+            left: 1rem;
+            width: 95%;
+        }
+    }
+    
+    &__input {
+        width: 100%;
+        height: 100%;
+        padding: 0 1rem;
+        background: $white-cl--3;
+        border-radius: .5rem;
+        border: none;
+        outline: none;
+        box-shadow: $container-insert-shadow--2;
+    }
+
+}

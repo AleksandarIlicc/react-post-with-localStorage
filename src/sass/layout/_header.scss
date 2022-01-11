@@ -1,0 +1,10 @@
+.header {
+    width: 100%;
+    height: $nav-footer-height;
+
+    &__logo {
+        font-size: 2rem;
+        text-transform: capitalize;
+        color: $dark--2;
+    }
+}

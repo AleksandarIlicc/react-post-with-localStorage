@@ -1,0 +1,21 @@
+// BASE
+$nav-footer-height: 10vh;
+
+// COLORS
+$white-cl--1: rgb(255, 255, 255);
+$white-cl--2: rgb(251, 251, 251);
+$white-cl--3: rgb(224, 224, 224);
+$dark--1: rgb(190, 190, 190);
+$dark--2: rgb(73, 73, 73);
+$red--1: rgb(232, 87, 87);
+$blue--1: rgb(89, 89, 223);
+$blue--2: rgb(69, 191, 219);
+$green--1: rgb(52, 200, 61);
+
+// SHADOW
+$container-shadow: 5px 5px 12px $dark--1,
+                  -5px -5px 12px $white-cl--1;
+$container-insert-shadow: inset 5px 5px 12px $dark--1,
+                          inset -5px -5px 12px $white-cl--1;
+$container-insert-shadow--2: inset 2px 2px 5px #bebebe, 
+                             inset -2px -2px 5px white;
