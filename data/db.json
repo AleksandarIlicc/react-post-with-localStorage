@@ -2,15 +2,15 @@
   "posts": [
     {
       "id": 1,
-      "date": "January-11-22",
-      "title": "First Title",
+      "date": "March-08-22",
+      "title": "1st Title",
       "text": "Maecenas consequat libero id ante molestie cursus. Fusce interdum aliquam ullamcorper."
     },
     {
       "id": 2,
-      "date": "January-11-22",
+      "date": "March-08-22",
       "title": "Second Title",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices nisi metus, id consequat magna consequat at. Morbi ultricies, dolor vitae laoreet vulputate, metus lacus placerat metus, vitae luctus justo orci ac urna."
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices nisi metus, id consequat magna consequat at. Morbi ultricies, dolor vitae laoreet vulputate, metus lacus placerat metus."
     }
   ]
 }
