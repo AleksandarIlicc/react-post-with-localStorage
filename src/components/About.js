@@ -14,7 +14,7 @@ const About = () => {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nunc ex, iaculis sit amet odio at,
                     elementum elementum diam. Nullam fermentum erat vel ante scelerisque, ut commodo lacus auctor. In nec
                     pretium eros. Fusce posuere varius lorem a pulvinar. Maecenas a vestibulum diam. Vivamus vel finibus eros,
-                    at scelerisque mauris. Aenean vel erat eget sapien maximus tincidunt. Sed malesuada neque vitae fermentum blandit.
+                    at scelerisque mauris. Aenean vel erat eget sapien maximus tincidunt. Sed malesuada neque vitae fermentum.
                 </p>
 
                 <p className='mb--small'>
