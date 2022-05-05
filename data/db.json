@@ -1,3 +1,22 @@
 {
-  "posts": []
+  "posts": [
+    {
+      "id": 1,
+      "date": "May-05-22",
+      "title": "First Title",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus metus velit, accumsan vitae purus non. "
+    },
+    {
+      "id": 2,
+      "date": "May-05-22",
+      "title": "Second Title",
+      "text": "Proin sagittis, leo nec mattis maximus, est nunc viverra magna, et ultrices ligula ipsum semper eros. Suspendisse faucibus eros pretium, vulputate sem. "
+    },
+    {
+      "id": 3,
+      "date": "May-05-22",
+      "title": "3th Heading",
+      "text": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+    }
+  ]
 }
