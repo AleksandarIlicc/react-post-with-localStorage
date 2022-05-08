@@ -10,10 +10,9 @@ import ErrorPage from './components/ErrorPage';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { format } from 'date-fns';
-import api from './api/posts';
 
 function App() {
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState(JSON.parse(localStorage.getItem('postList')) || []);
   const [search, setSearch] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [titlePost, setTitlePost] = useState('');
@@ -25,68 +24,35 @@ function App() {
 
   const showNav = () => setShow(!show);
 
-  async function deletePost(id) {
-    try {
-      await api.delete(`posts/${id}`);
+  useEffect(() => {
+    localStorage.setItem('postList', JSON.stringify(posts));
+  }, [posts])
+
+  const deletePost = (id) => {
       const newPosts = posts.filter(post => post.id !== id);
       setPosts(newPosts);
-    } catch (err) {
-      console.log(err.message);
-    }
   }
 
-  async function createPost(e) {
+   const createPost = (e) => {
     e.preventDefault();
     const id = posts.length ? posts[posts.length - 1].id + 1 : 1;
     const date = format(new Date(), 'MMMM-dd-yy');
     const newPost = { id, date, title: titlePost, text: textPost };
-
-    try {
-      const response = await api.post(`/posts/`, newPost);;
-      const allPost = [...posts, response.data];
-      setPosts(allPost);
-      navigate('/');
-      setTitlePost('');
-      setTextPost('');
-    } catch (err) {
-      console.log(err.massage);
-    }
+    setPosts([...posts, newPost]);
+    navigate('/');
+    setTitlePost('');
+    setTextPost('');
   }
 
   async function editPost(id) {
     const date = format(new Date(), 'MMMM-dd-yy');
     const updatedPost = { id, date, title: editTitle, text: editText };
-
-    try {
-      const response = await api.put(`/posts/${id}`, updatedPost);
-      const post = posts.map(post => post.id === id ? { ...response.data } : post);
-      setPosts(post);
-      navigate('/');
-      setEditTitle('');
-      setEditText('');
-
-    } catch (err) {
-      console.log(err.message);
-    }
+    const post = posts.map(post => post.id === id ? { ...updatedPost } : post);
+    setPosts(post);
+    navigate('/');
+    setEditTitle('');
+    setEditText('');
   }
-
-  useEffect(() => {
-    async function fetchDate() {
-      try {
-        const response = await api.get('/posts');
-        setPosts(response.data);
-
-      } catch (err) {
-        if (err.response) {
-          console.log(err.response.data);
-        } else {
-          console.log(err.message);
-        }
-      }
-    }
-
-    fetchDate();
-  }, [])
 
   useEffect(() => {
     const filterPosts = posts.filter(post => ((post.title).toLowerCase()).includes((search).toLowerCase()));
